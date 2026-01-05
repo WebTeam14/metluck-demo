@@ -36,11 +36,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
-          
+
           {/* Services Routes */}
           <Route path="/services" element={<Services />} />
           <Route path="/services/industrial" element={<IndustrialServices />} />
@@ -49,18 +49,18 @@ const App = () => (
           <Route path="/services/equipment-rental" element={<EquipmentRental />} />
           <Route path="/services/civil-construction" element={<CivilConstruction />} />
           <Route path="/services/facility-management" element={<FacilityManagement />} />
-          
+
           {/* Projects Routes */}
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/ongoing" element={<OngoingProjects />} />
           <Route path="/projects/completed" element={<CompletedProjects />} />
-          
+
           {/* Operations Routes */}
           <Route path="/operations" element={<About />} />
           <Route path="/operations/saudi-arabia" element={<SaudiArabiaOperations />} />
           <Route path="/operations/india" element={<IndiaOperations />} />
           <Route path="/operations/middle-east" element={<MiddleEastOperations />} />
-          
+
           <Route path="/partner" element={<Partner />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
